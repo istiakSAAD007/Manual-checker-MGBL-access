@@ -1,0 +1,97 @@
+{/* Transaction Date */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Transaction Date
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    June 15, 2026
+                  </td>
+                </tr>
+
+                {/* Company Account */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Company Account
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    1234567890
+                  </td>
+                </tr>
+
+                {/* Company Account Name */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Company Account Name
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">Debra</td>
+                </tr>
+
+                {/* Payment Type */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Payment Type
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    RTGS (Real Time Gross Settlement)
+                  </td>
+                </tr>
+
+                {/* Number of Transaction */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Number of Transaction
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">1</td>
+                </tr>
+
+                {/* Transaction Amount */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Transaction Amount
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    $50,000.00
+                  </td>
+                </tr>
+
+                {/* Total Transaction Amount */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Total Transaction Amount
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    $50,000.00
+                  </td>
+                </tr>
+
+                {/* Amounts in Words */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Amounts in Words
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    Fifty Thousand Dollars Only
+                  </td>
+                </tr>
+
+                {/* Status */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Status
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      Completed
+                    </span>
+                  </td>
+                </tr>
+
+                {/* Create By */}
+                <tr>
+                  <td className="px-5 py-3 bg-blue-100 font-medium text-sm w-1/3">
+                    Create By
+                  </td>
+                  <td className="px-5 py-3 text-sm text-zinc-700">
+                    Istiak Ahmed Saad
+                  </td>
+                </tr>

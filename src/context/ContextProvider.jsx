@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { StateContext } from "./useStateContext";
 
-function ContextProvide({ children }) {
-  const [state, setState] = useState(null);
+function ContextProvider({ children }) {
+  const [pendingTran, setpendingTran] = useState(true);
 
-  const value = { state };
+  const value = { pendingTran };
 
   return (
     <StateContext.Provider value={value}>{children}</StateContext.Provider>
   );
 }
 
-export default ContextProvide;
+export default ContextProvider;
