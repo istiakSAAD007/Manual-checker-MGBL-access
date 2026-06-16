@@ -4,17 +4,9 @@ import DashboardPage from "./pages/dashboard/DashboardPage";
 import HomePage from "./pages/HomePage";
 
 import AddSignatory from "./components/AddSignatory";
-import ConfirmTransacation from "./components/ConfirmTransacation";
-import FileUploadConfirm from "./components/FileUploadConfirm";
-import Beneficiary from "./pages/dashboard/Beneficiary/Beneficiary";
-import MGtoMG from "./pages/dashboard/Beneficiary/MGtoMG";
-import MGtoOther from "./pages/dashboard/Beneficiary/MGtoOther";
-import BeftnMultiplePayment from "./pages/dashboard/Payment/BeftnMultiplePayment";
-import BeftnSingplePayment from "./pages/dashboard/Payment/BeftnSingplePayment";
-import MgblMultiplePayment from "./pages/dashboard/Payment/MgblMultiplePayment";
-import MgblSinlgePayment from "./pages/dashboard/Payment/MgblSinlgePayment";
-import Payment from "./pages/dashboard/Payment/Payment";
-import RtgsSinglePayment from "./pages/dashboard/Payment/RtgsSinglePayment";
+import ChequeConf from "./pages/dashboard/Payment/ChequeConf";
+import PaymentAppr from "./pages/dashboard/Payment/PaymentAppr";
+import PaymentConf from "./pages/dashboard/Payment/PaymentConf";
 import ApprovePaymentHistory from "./pages/dashboard/Report/ApprovePaymentHistory";
 import PaymentHisotry from "./pages/dashboard/Report/PaymentHisotry";
 import TransactionReport from "./pages/dashboard/Report/TransactionReport";
@@ -22,7 +14,8 @@ import UnApprovedPaymentHistory from "./pages/dashboard/Report/UnApprovedPayment
 import UnAuthorizedPaymentHistory from "./pages/dashboard/Report/UnAuthorizedPaymentHistory";
 import VirtualAccountPaymentHistory from "./pages/dashboard/Report/VirtualAccountPaymentHistory";
 import VirtualAccountReport from "./pages/dashboard/Report/VirtualAccountReport";
-import VirtualAccount from "./pages/dashboard/VirtualAccount";
+import VirtualAccount from "./pages/dashboard/VirtualAccount/VirtualAccount";
+import Summary from "./pages/users/Summary";
 
 function App() {
   return (
@@ -38,24 +31,18 @@ function App() {
 
             {/* Payment Routes */}
             <Route path="payment">
-              <Route index element={<Payment />} />{" "}
-              {/* Optional main payment dashboard */}
-              <Route path="rtgs" element={<RtgsSinglePayment />} />
-              <Route path="beftn-single" element={<BeftnSingplePayment />} />
-              <Route path="beftn-multiple" element={<BeftnMultiplePayment />} />
-              <Route path="mgbl-single" element={<MgblSinlgePayment />} />
-              <Route path="mgbl-multiple" element={<MgblMultiplePayment />} />
-            </Route>
-
-            {/* Beneficiary Management Routes */}
-            <Route path="beneficiary">
-              <Route index element={<Beneficiary />} />
-              <Route path="mgbl" element={<MGtoMG />} />
-              <Route path="other" element={<MGtoOther />} />
+              <Route path="unconfirmed-payment" element={<PaymentConf />} />
+              <Route path="unconfirmed-cheque" element={<ChequeConf />} />
+              <Route path="unapproved-payment" element={<PaymentAppr />} />
             </Route>
 
             {/* Virtual Account Routes */}
             <Route path="virtual-account" element={<VirtualAccount />} />
+
+            {/* Payment Routes */}
+            <Route path="users">
+              <Route path="summary" element={<Summary />} />
+            </Route>
 
             {/* Report Routes */}
             <Route path="report">
@@ -79,19 +66,19 @@ function App() {
             </Route>
 
             {/* Confirm Transaction */}
-            <Route
+            {/* <Route
               path="confirm-transaction"
               element={<ConfirmTransacation />}
-            />
+            /> */}
 
             {/* Add signatory */}
             <Route path="signatory" element={<AddSignatory />} />
 
             {/* File Upload Confirmaiton */}
-            <Route
+            {/* <Route
               path="file-upload-confirmation"
               element={<FileUploadConfirm />}
-            />
+            /> */}
           </Route>
         </Routes>
       </section>

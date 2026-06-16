@@ -1,8 +1,10 @@
 import useFetch from "../hooks/useFetch";
 import { signatoryTable } from "../assets/VariableAssist";
 import Button from "./reusable/Button";
+import { useNavigate } from "react-router";
 
 function AddSignatory() {
+  const navigate = useNavigate();
   const { data: userInfo, loading, error } = useFetch("data2.json");
 
   if (loading)
@@ -96,7 +98,7 @@ function AddSignatory() {
             className="px-3.5 py-2.5"
             variant="primary"
             label="Confirm"
-            onClick={() => {}}
+            onClick={() => navigate("/dashboard")}
           />
           <Button
             className="px-3.5 py-2.5"

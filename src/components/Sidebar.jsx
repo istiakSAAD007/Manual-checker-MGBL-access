@@ -24,66 +24,56 @@ function Sidebar({ isOpen, setIsOpen }) {
   };
 
   const menuItems = [
+    // dashboard
     {
       name: "Dashboard",
       path: "/dashboard",
       exact: true,
       icon: <LayoutDashboard size={18} />,
     },
+    // payment
     {
       name: "Payment",
       path: "/dashboard/payment",
       icon: <CreditCard size={18} />,
       subItems: [
         {
-          name: "RTGS - Single Payment",
-          path: "/dashboard/payment/rtgs",
+          name: "Un-confirmed Payment",
+          path: "/dashboard/payment/unconfirmed-payment",
           icon: <SquarePen size={16} />,
         },
         {
-          name: "BEFTN - Single Payment",
-          path: "/dashboard/payment/beftn-single",
+          name: "Un-confirmed Cheque Print",
+          path: "/dashboard/payment/unconfirmed-cheque",
           icon: <SquarePen size={16} />,
         },
         {
-          name: "BEFTN - Multiple Payment",
-          path: "/dashboard/payment/beftn-multiple",
-          icon: <SquarePen size={16} />,
-        },
-        {
-          name: "MGBL - Single Payment",
-          path: "/dashboard/payment/mgbl-single",
-          icon: <SquarePen size={16} />,
-        },
-        {
-          name: "MGBL - Multiple Payment",
-          path: "/dashboard/payment/mgbl-multiple",
+          name: "Un-Approved Payment",
+          path: "/dashboard/payment/unapproved-payment",
           icon: <SquarePen size={16} />,
         },
       ],
     },
-    {
-      name: "Beneficiary Management",
-      path: "/dashboard/beneficiary",
-      icon: <Users size={18} />,
-      subItems: [
-        {
-          name: "MGBL To MGBL",
-          path: "/dashboard/beneficiary/mgbl",
-          icon: <SquarePen size={16} />,
-        },
-        {
-          name: "MGBL To Other Bank",
-          path: "/dashboard/beneficiary/other",
-          icon: <SquarePen size={16} />,
-        },
-      ],
-    },
+    // virtual account management
     {
       name: "Virtual Account Management",
       path: "/dashboard/virtual-account",
       icon: <Landmark size={18} />,
     },
+    // user
+    {
+      name: "Users",
+      path: "/dashboard/users",
+      icon: <Users size={18} />,
+      subItems: [
+        {
+          name: "Summary",
+          path: "/dashboard/users/summary",
+          icon: <SquarePen size={16} />,
+        },
+      ],
+    },
+    // report
     {
       name: "Report",
       path: "/dashboard/report",
