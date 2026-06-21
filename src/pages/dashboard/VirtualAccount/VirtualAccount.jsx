@@ -1,5 +1,3 @@
-
-
 function VirtualAccount() {
   return (
     <div>VirtualAccount</div>

@@ -57,8 +57,15 @@ function Sidebar({ isOpen, setIsOpen }) {
     // virtual account management
     {
       name: "Virtual Account Management",
-      path: "/dashboard/virtual-account",
+      path: "/dashboard/virtual",
       icon: <Landmark size={18} />,
+      subItems: [
+        {
+          name: "Account",
+          path: "/dashboard/virtual/account-management",
+          icon: <SquarePen size={16} />,
+        },
+      ],
     },
     // user
     {

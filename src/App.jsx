@@ -4,6 +4,7 @@ import DashboardPage from "./pages/dashboard/DashboardPage";
 import HomePage from "./pages/HomePage";
 
 import AddSignatory from "./components/AddSignatory";
+import SignatoryReset from "./components/SignatoryReset";
 import ChequeConf from "./pages/dashboard/Payment/ChequeConf";
 import PaymentAppr from "./pages/dashboard/Payment/PaymentAppr";
 import PaymentConf from "./pages/dashboard/Payment/PaymentConf";
@@ -16,7 +17,6 @@ import VirtualAccountPaymentHistory from "./pages/dashboard/Report/VirtualAccoun
 import VirtualAccountReport from "./pages/dashboard/Report/VirtualAccountReport";
 import VirtualAccount from "./pages/dashboard/VirtualAccount/VirtualAccount";
 import Summary from "./pages/users/Summary";
-import SignatoryReset from "./components/SignatoryReset";
 
 function App() {
   return (
@@ -40,14 +40,18 @@ function App() {
             {/* Virtual Account Routes */}
             <Route path="virtual-account" element={<VirtualAccount />} />
 
-            {/* Payment Routes */}
+            {/* User Summary */}
             <Route path="users">
               <Route path="summary" element={<Summary />} />
             </Route>
 
+            {/* Virtual account */}
+            <Route path="virtual">
+              <Route path="account-management" element={<VirtualAccount />} />
+            </Route>
+
             {/* Report Routes */}
             <Route path="report">
-              <Route index element={<VirtualAccount />} />
               <Route
                 path="transaction-status"
                 element={<TransactionReport />}
