@@ -16,7 +16,8 @@ import UnAuthorizedPaymentHistory from "./pages/dashboard/Report/UnAuthorizedPay
 import VirtualAccountPaymentHistory from "./pages/dashboard/Report/VirtualAccountPaymentHistory";
 import VirtualAccountReport from "./pages/dashboard/Report/VirtualAccountReport";
 import VirtualAccount from "./pages/dashboard/VirtualAccount/VirtualAccount";
-import Summary from "./pages/users/Summary";
+import Summary from "./pages/dashboard/users/Summary";
+
 
 function App() {
   return (

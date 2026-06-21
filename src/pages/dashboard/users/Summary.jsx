@@ -1,5 +1,5 @@
-import { userSummary } from "../../assets/VariableAssist";
-import useFetch from "../../hooks/useFetch";
+import { userSummary } from "../../../assets/VariableAssist";
+import useFetch from "../../../hooks/useFetch";
 
 function Summary() {
   const { data: userInfo, loading, error } = useFetch("data5.json");
