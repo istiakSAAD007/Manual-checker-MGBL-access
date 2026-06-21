@@ -66,22 +66,10 @@ function App() {
               <Route path="approved" element={<ApprovePaymentHistory />} />
             </Route>
 
-            {/* Confirm Transaction */}
-            {/* <Route
-              path="confirm-transaction"
-              element={<ConfirmTransacation />}
-            /> */}
-
             {/* Add signatory */}
             <Route path="signatory" element={<AddSignatory />} />
 
             <Route path="update-signatory" element={<SignatoryReset />} />
-
-            {/* File Upload Confirmaiton */}
-            {/* <Route
-              path="file-upload-confirmation"
-              element={<FileUploadConfirm />}
-            /> */}
           </Route>
         </Routes>
       </section>

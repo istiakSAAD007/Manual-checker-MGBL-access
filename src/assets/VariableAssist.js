@@ -33,3 +33,21 @@ export const signatoryTable = [
     head: "Create By",
   },
 ];
+
+export const userSummary = [
+  {
+    head: "Username",
+  },
+  {
+    head: "Full Name",
+  },
+  {
+    head: "Email",
+  },
+  {
+    head: "Phone",
+  },
+  {
+    head: "Role",
+  },
+];
