@@ -16,6 +16,7 @@ import VirtualAccountPaymentHistory from "./pages/dashboard/Report/VirtualAccoun
 import VirtualAccountReport from "./pages/dashboard/Report/VirtualAccountReport";
 import VirtualAccount from "./pages/dashboard/VirtualAccount/VirtualAccount";
 import Summary from "./pages/users/Summary";
+import SignatoryReset from "./components/SignatoryReset";
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
 
             {/* Add signatory */}
             <Route path="signatory" element={<AddSignatory />} />
+
+            <Route path="update-signatory" element={<SignatoryReset />} />
 
             {/* File Upload Confirmaiton */}
             {/* <Route

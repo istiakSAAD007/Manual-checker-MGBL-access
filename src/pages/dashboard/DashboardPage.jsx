@@ -1,16 +1,12 @@
-import { Check } from "lucide-react";
-
-import { SquarePen } from "lucide-react";
+import { Check, SquarePen } from "lucide-react";
+import { useNavigate } from "react-router";
 import Button from "../../components/reusable/Button";
 import Table from "../../components/reusable/Table";
-import { useStateContext } from "../../context/useStateContext";
 import useFetch from "../../hooks/useFetch";
-import { useNavigate } from "react-router";
 
 function DashboardPage() {
   const navigate = useNavigate();
   const { data: tableData, loading, error } = useFetch("data1.json");
-  const { pendingTran } = useStateContext();
   const truthVal = false;
 
   const columns = [
@@ -44,7 +40,7 @@ function DashboardPage() {
     },
   ];
 
-  const handleConfirm = (row) => alert(`Confirming: ${row.TransactionRef}`);
+  // const handleConfirm = (row) => alert(`Confirming: ${row.TransactionRef}`);
   const handleReject = (row) => alert(`Rejecting: ${row.TransactionRef}`);
   const handleDetail = (row) =>
     alert(`Viewing details for: ${row.TransactionRef}`);
@@ -60,11 +56,9 @@ function DashboardPage() {
 
   return (
     <div className="w-full space-y-6">
-      {pendingTran && (
-        <h2 className="text-3xl font-normal text-gray-700 tracking-tight">
-          Pending Transactions
-        </h2>
-      )}
+      <h2 className="text-3xl font-normal text-gray-700 tracking-tight">
+        Pending Transactions
+      </h2>
 
       {truthVal && (
         <div className="p-3 bg-green-50 rounded-md border border-green-200">
@@ -76,7 +70,8 @@ function DashboardPage() {
 
       <Table
         columns={columns}
-        data={tableData || []}
+        data={tableData}
+        rowKey="forDashboard"
         renderActions={(row) => (
           // flex flex-wrap gap-2 max-w-[240px]
           <div className="grid grid-cols-2 gap-x-4 gap-y-2 w-46">

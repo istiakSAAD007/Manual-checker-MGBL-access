@@ -16,7 +16,7 @@ function Button({
   const variants = {
     primary: "bg-[#007bff] hover:bg-blue-600 text-white",
     success: "bg-[#28a745] hover:bg-green-600 text-white",
-    danger: "bg-red-500 hover:bg-red-600 text-white",
+    danger: "bg-red-600 hover:bg-red-500 text-white",
     normal: "bg-gray-300 hover:bg-gray-400 text-gray-950",
   };
 

@@ -1,10 +1,9 @@
-function Table({ columns, data, renderActions }) {
+function Table({ columns, data = [], renderActions, rowKey }) {
   return (
     <div className="overflow-x-auto bg-white rounded-md border border-gray-200 shadow-sm">
       <table className="min-w-full text-left text-sm whitespace-nowrap border-collapse">
-        {/* Table Head */}
         <thead className="border border-gray-200 bg-gray-100 font-semibold text-gray-700">
-          <tr className="">
+          <tr>
             {columns.map((column) => (
               <th
                 key={column.accessor}
@@ -13,13 +12,13 @@ function Table({ columns, data, renderActions }) {
                 {column.header}
               </th>
             ))}
+
             {renderActions && (
               <th className="px-2 py-4 text-center">Actions</th>
             )}
           </tr>
         </thead>
 
-        {/* Table Body */}
         <tbody className="divide-y divide-gray-100 text-gray-600">
           {data.length === 0 ? (
             <tr>
@@ -27,13 +26,13 @@ function Table({ columns, data, renderActions }) {
                 colSpan={columns.length + (renderActions ? 1 : 0)}
                 className="text-center py-8 text-gray-400"
               >
-                No pending transactions found.
+                No data found.
               </td>
             </tr>
           ) : (
             data.map((row, index) => (
               <tr
-                key={row.TransactionRef || index}
+                key={rowKey ? row[rowKey] : index}
                 className={`${index % 2 !== 0 ? "bg-gray-200" : "bg-white"}`}
               >
                 {columns.map((column) => (
