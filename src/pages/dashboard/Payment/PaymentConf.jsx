@@ -9,8 +9,6 @@ function PaymentConf() {
   const { data: tableData, loading, error } = useFetch("data3.json");
   const truthVal = false;
 
-  console.log(tableData);
-
   const columns = [
     {
       header: "Transaction Reference",

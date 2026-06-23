@@ -11,8 +11,6 @@ function PaymentAppr() {
   const { pendingTran } = useStateContext();
   const truthVal = false;
 
-  console.log(tableData);
-
   const columns = [
     {
       header: "Transaction Date",
